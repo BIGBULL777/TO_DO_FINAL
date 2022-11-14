@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+
+        *{
+            background-color: rgb(168, 206, 192);
+        }
+      
+       
+        .item{
+            background-color:burlywood;
+            border :2px solid rebeccapurple;
+            margin: 45px;
+            padding: 2px;
+            width: 200px;
+            height: 200px;
+
+        }
+        h3{
+            font-style: italic;
+            font-size: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        .ninja{
+            /* background-color: violet; */
+            border :2px solid red;
+            border-radius: 5px;
+            box-sizing: 40px;
+            background-image: GO AHEAD;
+            padding-right: 400px;
+        }
+        #item1{
+            /* background-color:burlywood;
+            border :2px solid rebeccapurple; */
+            margin: 4px;
+            padding: 2px;
+            width: 200px;
+            height: 200px;
+         
+
+        }
+        .boomer{
+            font-size: large;
+        
+        }
+        #add_a_task{
+            font-style: italic;
+            font-size: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+        }
+        #hover{
+            cursor: pointer;
+            background-color: silver;
+        }
+         /* #abc{
+             background-color: silver;
+
+         }   */
+    </style>
+</head>
+<body>
+    <h3>TO-DO-APP</h3>
+    <div class="container">
+        <div class="item" id="item-1">
+            {% for mykey,myvalue in mydict.items %}
+
+        <h3 class=""> {{mykey}}</h3>
+            {% for s in myvalue %}
+                <p> {{s}}</p> <br>
+            {% endfor %}
+            
+            {% endfor %}
+            <br><br><br><br><br><br><br>
+            <h3 id="add_a_task">ADD A TASK</h3>
+            <form method="POST" action="/" class="ninja">
+                {%csrf_token%}
+                <b class="boomer">{{form}}</b>
+                <input type="submit" name="create task" id="hover">
+            </form>
+    </div>
+
+
+
+
+
+
+        </div>
+        <!-- <div class="item" id="item-2">WEEKLY and CONTENT WITH LOOPS</div>
+        <div class="item" id="item-3">MONTHLY and CONTENT WITH LOOPS</div> -->
+    </div>
+    
+</body>
+</html>

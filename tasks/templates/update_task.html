@@ -1,0 +1,11 @@
+<h3>
+    UPDATE TASK
+
+</h3>
+<form action="" method = "POST">
+    {% csrf_token %}
+    DESC:{{form.desc}}
+    COMEPLTE:{{form.complete}}
+    TIME:{{form.time_created}}
+    <input type="submit",name = "UPDATE TASK">
+</form>

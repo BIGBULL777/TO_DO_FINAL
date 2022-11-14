@@ -1,0 +1,14 @@
+<div class="container">
+    {% for mykey,myvalue in mydict.items %}
+        <h3 class="container"> {{mykey}}</h3>
+        <div>
+
+            {% for s in myvalue %}
+            <p>
+                {{s}} </p>
+
+                {% endfor %}
+            
+            </div>
+            {% endfor %}           
+</div>
