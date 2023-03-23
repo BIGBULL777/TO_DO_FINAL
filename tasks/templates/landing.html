@@ -66,7 +66,7 @@
     </nav>
 
     <h3>
-        <p style="width: fit-content;margin-left: 5px;">Welcome {{request.user}}!</p>
+        <p style="width: fit-content;margin-left: 5px; color:white">Welcome {{request.user}}!</p>
     </h3>
 
     
@@ -87,7 +87,7 @@
             <h2 id="add_a_task">ADD A TASK</h2>
           </div>
           <div class="container">
-            <form method="POST" action="/" class="ninja">
+            <form method="POST" action="/" class="ninja" style = "width: fit-content;">
               {%csrf_token%}
               <b class="boomer" style="position: -ms-page;">{{form}}</b>
               <input type="submit" name="create task" id="hover">
