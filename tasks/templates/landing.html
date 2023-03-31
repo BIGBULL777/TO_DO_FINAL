@@ -31,7 +31,6 @@
             background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(145,129,152,1) 13%, rgba(96,53,64,1) 100%);
           }
     </style>
-
 </head>
 
 <body>
@@ -51,7 +50,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="width: -webkit-fill-available">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/new">Lists</a>
+                        <a class="nav-link active" aria-current="page" href="/new" id="Lists">Lists</a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +65,7 @@
     </nav>
 
     <h3>
-        <p style="width: fit-content;margin-left: 5px; color:white">Welcome {{request.user}}!</p>
+        <p style="width: fit-content;margin-left: 5px; color:white; align-items: center;">Welcome {{request.user}}!</p>
     </h3>
 
     
@@ -90,7 +89,7 @@
             <form method="POST" action="/" class="ninja" style = "width: fit-content;">
               {%csrf_token%}
               <b class="boomer" style="position: -ms-page;">{{form}}</b>
-              <input type="submit" name="create task" id="hover">
+              <input type="submit" name="create task" id="hover" style = "margin-top: 5px;">
             </form>
           </div>
     </center>
@@ -126,7 +125,11 @@
             </div>
         </div>
     </span> {% endfor %}
-
+    <script>
+        documet.getElementById("Lists").addEventListner("click",function(){
+            document.querySelector(".popup").style.display = "flex"
+        })
+    </script>
 </body>
 
 </html>

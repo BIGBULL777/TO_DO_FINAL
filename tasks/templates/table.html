@@ -5,15 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New table</title>
+    <script src=""></script>
+    <style>
+        body{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(145,129,152,1) 13%, rgba(96,53,64,1) 100%);
+          }
+        .form1{
+            align-items: center;
+            text-align: center;
 
+          }
+    </style>
 </head>
 <body>
-    <div>
+    <center>
+    <div class="form1">
               <form action="/new" method="POST" class="ninja">
                     {% csrf_token %}
                     <b class="boomer">{{form1}}</b>
                     <input type="submit" name='create time field'>
                 </form>
             </div>
+        </center>
 </body>
 </html>

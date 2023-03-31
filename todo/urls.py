@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from django.conf.urls import url
+# from django.conf.urls import url
+from django.urls import re_path as url
 from tasks import views
 from rest_framework.urlpatterns import format_suffix_patterns
 urlpatterns = [

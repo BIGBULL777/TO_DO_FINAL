@@ -23,6 +23,9 @@ class Timeform(forms.ModelForm):
     class Meta():
         model = time    
         fields = '__all__'
+        widgets = {
+            'title':forms.TextInput(attrs={'class':'form-control'}),
+        }
 
 class Userform(forms.ModelForm):
     class Meta():
